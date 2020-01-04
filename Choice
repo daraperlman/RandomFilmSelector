@@ -1,0 +1,14 @@
+import random
+
+film_list = {
+"Logan" : "BluRay", 
+"Whiplash" : "BluRay", 
+"Chris Rock:  Never Scared" : "DVD", 
+"It's A Wonderful Life" : "DVD"
+}
+
+def popper():
+	film_choice = random.choice(list(film_list.items())) #randomly selects an item from 'film_list' dictionary
+	movie_title = film_choice[0] #the first piece of the item pair that is selected is the key, which is the movie title
+	del film_list[movie_title] #once we have our film title, the movie will now be taken off the list
+	return film_choice
